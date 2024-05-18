@@ -24984,9 +24984,9 @@ async function run() {
         }
         const responseBody = await response.json();
         const accessToken = responseBody.access_token;
-        core.info(`Access token: ${accessToken}`);
+        const accessTokenBase64 = Buffer.from(accessToken).toString('base64');
         // Set outputs for other workflow steps to use
-        core.setOutput('access-token', accessToken);
+        core.setOutput('access-token', accessTokenBase64);
     }
     catch (error) {
         // Fail the workflow run if an error occurs
