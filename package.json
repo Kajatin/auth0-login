@@ -1,7 +1,7 @@
 {
   "name": "auth0-login",
   "description": "Manages the login process for Auth0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Roland Kajatin <roland.kajatin@gmail.com>",
   "private": true,
   "homepage": "https://github.com/Kajatin/auth0-login",
