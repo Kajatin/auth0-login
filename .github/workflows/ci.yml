@@ -57,8 +57,11 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          tenant-url: ${{ secrets.AUTH0_TENANT_URL }}
+          client-id: ${{ secrets.AUTH0_CLIENT_ID }}
+          client-secret: ${{ secrets.AUTH0_CLIENT_SECRET }}
+          audience: ${{ secrets.AUTH0_AUDIENCE }}
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.time }}"
+        run: echo "${{ steps.test-action.outputs.access-token }}"
