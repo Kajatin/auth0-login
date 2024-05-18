@@ -1,4 +1,4 @@
-name: 'Auth0 Login'
+name: 'Retrieve Auth0 Access Token'
 description: 'Auth0 login management for your GitHub Actions.'
 author: 'Roland Kajatin <roland.kajatin@gmail.com>'
 
