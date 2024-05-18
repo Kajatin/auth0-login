@@ -1,23 +1,35 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Auth0 Login'
+description: 'Auth0 login management for your GitHub Actions.'
+author: 'Roland Kajatin <roland.kajatin@gmail.com>'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: 'heart'
-  color: 'red'
+  icon: 'shield'
+  color: 'blue'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  tenant-url:
+    description: 'Your Auth0 tenant URL.'
     required: true
-    default: '1000'
+  client-id:
+    description: 'Your Auth0 client ID.'
+    required: true
+  client-secret:
+    description: 'Your Auth0 client secret.'
+    required: true
+  audience:
+    description: 'Your Auth0 audience.'
+    required: false
+  grant-type:
+    description: 'Your Auth0 grant type.'
+    required: false
+    default: 'client_credentials'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  access-token:
+    description: 'Your Auth0 access token.'
 
 runs:
   using: node20

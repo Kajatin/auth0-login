@@ -1,21 +1,23 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
-  "version": "0.0.0",
-  "author": "",
+  "name": "auth0-login",
+  "description": "Manages the login process for Auth0",
+  "version": "0.1.0",
+  "author": "Roland Kajatin <roland.kajatin@gmail.com>",
   "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
+  "homepage": "https://github.com/Kajatin/auth0-login",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/Kajatin/auth0-login.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "https://github.com/Kajatin/auth0-login/issues"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "setup",
+    "auth0",
+    "login"
   ],
   "exports": {
     ".": "./dist/index.js"
