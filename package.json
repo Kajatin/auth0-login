@@ -1,7 +1,7 @@
 {
   "name": "auth0-login",
   "description": "Manages the login process for Auth0",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "author": "Roland Kajatin <roland.kajatin@gmail.com>",
   "private": true,
   "homepage": "https://github.com/Kajatin/auth0-login",
@@ -23,7 +23,7 @@
     ".": "./dist/index.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=16"
   },
   "scripts": {
     "bundle": "npm run format:write && npm run package",
@@ -73,7 +73,7 @@
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.11",
+    "@types/node": "^16.11.7",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@vercel/ncc": "^0.38.1",
