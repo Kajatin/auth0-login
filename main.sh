@@ -24,6 +24,8 @@ fi
 # Extract access token
 ACCESS_TOKEN=$(echo "$RESPONSE" | jq -r .access_token)
 
+echo $ACCESS_TOKEN
+
 # Set outputs
 echo "::add-mask::$ACCESS_TOKEN"
 echo "access-token=$ACCESS_TOKEN" >> "$GITHUB_OUTPUT"
