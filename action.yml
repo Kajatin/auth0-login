@@ -37,9 +37,9 @@ runs:
     - name: Run Auth0 Login Script
       shell: bash
       env:
-        TENANT_URL: ${{ inputs.tenant-url }})
-        CLIENT_ID: ${{ inputs.client-id }})
-        CLIENT_SECRET: ${{ inputs.client-secret }})
+        TENANT_URL: ${{ inputs.tenant-url }}
+        CLIENT_ID: ${{ inputs.client-id }}
+        CLIENT_SECRET: ${{ inputs.client-secret }}
         AUDIENCE: ${{ inputs.audience }})
-        GRANT_TYPE: ${{ inputs.grant-type }})
+        GRANT_TYPE: ${{ inputs.grant-type }}
       run: ./main.sh
