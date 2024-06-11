@@ -30,7 +30,7 @@ inputs:
 outputs:
   access-token:
     description: 'Your Auth0 access token.'
-    value: ${{ steps.auth0.outputs.ACCESS_TOKEN }}
+    value: ${{ steps.auth0.outputs.access-token }}
 
 runs:
   using: "composite"
