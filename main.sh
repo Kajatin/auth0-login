@@ -28,4 +28,4 @@ echo "$RESPONSE"
 
 # Set outputs
 echo "::add-mask::$ACCESS_TOKEN"
-echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_OUTPUT"
+echo "access-token=$ACCESS_TOKEN" >> "$GITHUB_OUTPUT"

@@ -28,13 +28,15 @@ inputs:
 
 # Define your outputs here.
 outputs:
-  ACCESS_TOKEN:
+  access-token:
     description: 'Your Auth0 access token.'
+    value: ${{ steps.auth0.outputs.access-token }}
 
 runs:
   using: "composite"
   steps:
     - name: Run Auth0 Login Script
+      id: auth0
       shell: bash
       env:
         TENANT_URL: ${{ inputs.tenant-url }}
