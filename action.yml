@@ -2,12 +2,10 @@ name: 'Retrieve Auth0 Access Token'
 description: 'Auth0 login management for your GitHub Actions.'
 author: 'Roland Kajatin <roland.kajatin@gmail.com>'
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
   icon: 'shield'
   color: 'blue'
 
-# Define your inputs here.
 inputs:
   tenant-url:
     description: 'Your Auth0 tenant URL.'
@@ -26,7 +24,6 @@ inputs:
     required: false
     default: 'client_credentials'
 
-# Define your outputs here.
 outputs:
   access-token:
     description: 'Your Auth0 access token.'
@@ -98,11 +95,11 @@ runs:
 
         # Main function
         main() {
-          tenant_url=$(get_input "INPUT_TENANT_URL" true)
-          client_id=$(get_input "INPUT_CLIENT_ID" true)
-          client_secret=$(get_input "INPUT_CLIENT_SECRET" true)
-          audience=$(get_input "INPUT_AUDIENCE" false)
-          grant_type=$(get_input "INPUT_GRANT_TYPE" false)
+          tenant_url=$(get_input "tenant-url" true)
+          client_id=$(get_input "client-id" true)
+          client_secret=$(get_input "client-secret" true)
+          audience=$(get_input "audience" false)
+          grant_type=$(get_input "grant-type" false)
 
           if [[ -z "$grant_type" ]]; then
             grant_type="client_credentials"
