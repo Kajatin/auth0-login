@@ -27,5 +27,4 @@ ACCESS_TOKEN=$(echo "$RESPONSE" | jq -r .access_token)
 echo "$RESPONSE"
 
 # Set outputs
-echo "::add-mask::$ACCESS_TOKEN"
-echo "access-token=$ACCESS_TOKEN" >> "$GITHUB_OUTPUT"
+echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> "$GITHUB_OUTPUT"

@@ -32,4 +32,4 @@ jobs:
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.ACCESS_TOKEN }}"
+        run: echo "${{ steps.test-action.outputs.access-token }}"
