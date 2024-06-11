@@ -40,6 +40,6 @@ runs:
         TENANT_URL: ${{ inputs.tenant-url }}
         CLIENT_ID: ${{ inputs.client-id }}
         CLIENT_SECRET: ${{ inputs.client-secret }}
-        AUDIENCE: ${{ inputs.audience }})
+        AUDIENCE: ${{ inputs.audience }}
         GRANT_TYPE: ${{ inputs.grant-type }}
       run: ./main.sh
