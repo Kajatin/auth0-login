@@ -44,4 +44,4 @@ runs:
         CLIENT_SECRET: ${{ inputs.client-secret }}
         AUDIENCE: ${{ inputs.audience }}
         GRANT_TYPE: ${{ inputs.grant-type }}
-      run: ./main.sh
+      run: ${GITHUB_ACTION_PATH}/main.sh
