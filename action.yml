@@ -28,7 +28,7 @@ inputs:
 
 # Define your outputs here.
 outputs:
-  access-token:
+  ACCESS_TOKEN:
     description: 'Your Auth0 access token.'
 
 runs:
