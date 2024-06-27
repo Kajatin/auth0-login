@@ -35,6 +35,9 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: Install jq
+      uses: dcarbone/install-jq-action@v2.1.0
+
     - name: Run Auth0 Login Script
       id: auth0
       shell: bash
