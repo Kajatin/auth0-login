@@ -30,7 +30,21 @@ inputs:
 outputs:
   access-token:
     description: 'Your Auth0 access token.'
+    value: ${{ steps.auth0.outputs.access-token }}
 
 runs:
-  using: node20
-  main: dist/index.js
+  using: "composite"
+  steps:
+    - name: Install jq
+      uses: dcarbone/install-jq-action@v2.1.0
+
+    - name: Run Auth0 Login Script
+      id: auth0
+      shell: bash
+      env:
+        TENANT_URL: ${{ inputs.tenant-url }}
+        CLIENT_ID: ${{ inputs.client-id }}
+        CLIENT_SECRET: ${{ inputs.client-secret }}
+        AUDIENCE: ${{ inputs.audience }}
+        GRANT_TYPE: ${{ inputs.grant-type }}
+      run: ${GITHUB_ACTION_PATH}/main.sh
